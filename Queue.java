@@ -42,6 +42,37 @@ public class Queue {
        }
   return size; 
    }
-}
+   
+   //Add item to the front of the list
+    public void enqueue(String data) {
+       if(rear != null) {
+           rear.next = new Node(data, null);
+           rear = rear.next;
+       }
+       else {
+           rear = new Node(data, null);
+           front = rear;
+       }
+    }
+  
+    //remove item from the end of the queue
+    public String dequeue()
+    {
+       if(isEmpty()){
+           System.out.println("The Queue is empty.");
+           return null;
+       }
+       else {
+         String dequeuedValue = front.value; 
+           front = front.next; 
+          
+        if (front == null) {
+               rear = null;
+           }
+          
+        return dequeuedValue; 
+       }
+    }
 
+}
   
