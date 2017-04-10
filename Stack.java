@@ -41,5 +41,22 @@ public class Stack {
        }
        return size; 
    }
-}
+   
+    //add item to top of stack
+   public void push(String data) {
+       top = new Node(data, top); 
+   }
   
+   //Removes item from top of stack
+   public String pop() {
+       if(isEmpty()) {
+           System.out.println("The Stack is empty.");
+           return null;
+       }
+      else {
+           String poppedValue = top.value; 
+           top = top.next;
+           return poppedValue; 
+       }
+   }
+}
