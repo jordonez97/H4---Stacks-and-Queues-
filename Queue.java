@@ -22,5 +22,9 @@ public class Queue {
            this(val, null); 
        }  
    }
+  //initializes Node front and rear to null 
+    Node front = null; 
+    Node rear = null; 
 }
+
   
