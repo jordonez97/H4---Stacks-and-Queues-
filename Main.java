@@ -100,7 +100,28 @@ public class Main {
       
         System.out.println("Peeked: " + qlist.peek());
       
-     }
+     //Initiaizing our second set of stack and queue
+       Stack list2 = new Stack(); 
+       Queue qlist2 = new Queue(); 
+      
+       System.out.println("\nThis is our second Stack");
+       list2.push("One");
+       list2.push("Two");
+       list2.push("Three");
+       list2.push("Four");
+       list2.push("Five");
+       list2.traverseForwardAndPrint();
+      
+       System.out.println("This is our second Queue");
+       qlist2.enqueue("One");
+       qlist2.enqueue("Two");
+       qlist2.enqueue("Three");
+       qlist2.enqueue("Four");
+       qlist2.enqueue("Five");
+       qlist2.traverseFrontAndPrint();
+      
+       System.out.println();
+}
 }
   
   
