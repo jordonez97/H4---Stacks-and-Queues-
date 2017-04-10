@@ -133,7 +133,19 @@ public class Main {
        testQueue3.traverseFrontAndPrint();
       
        System.out.println();
+       
+       //testing moveQueueToStack method
+       System.out.println("Testing the moveQueueToStack method: ");
+       Stack testStack3 = new Stack();
+      
+       testStack3 = moveQueueToStack(qlist2);
+       System.out.println("The Original Queue: ");
+       qlist2.traverseFrontAndPrint();
+       System.out.println("\nThe Stack after moving QueueToStack: ");
+       testStack3.traverseForwardAndPrint();
+      
+       System.out.println();
      }}
-  
+       
   
         
