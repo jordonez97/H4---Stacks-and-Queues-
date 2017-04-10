@@ -62,6 +62,45 @@ public class Main {
       
        return duplicateStack; 
    }
+    
+     public static void main(String [] args){
+     
+       Stack list = new Stack(); 
+       Queue qlist = new Queue(); 
+  
+       //testing Stack Class
+       System.out.println("The Stack includes the following: ");
+       list.push("5");
+       list.push("4");
+       list.push("3");
+       list.push("2");
+       list.push("1");
+       list.traverseForwardAndPrint();
+      
+       String data = list.pop();
+        System.out.println("\nPopped: " + data);
+        System.out.println("Now since we popped from the top of the list, our Stack includes the following: ");
+        list.traverseForwardAndPrint();
+      
+        System.out.println("Peeked: " + list.peek());
+  
+       //testing Queue Class
+       System.out.println("\nThe Queue class includes the following: ");
+       qlist.enqueue("2");
+       qlist.enqueue("4");
+       qlist.enqueue("6");
+       qlist.enqueue("8");
+       qlist.enqueue("10");
+       qlist.traverseFrontAndPrint();
+      
+        String data2 = qlist.dequeue();
+        System.out.println("\nDequeued: " + data2);
+        System.out.println("We dequeue from the end of the list, our Queue includes the following: ");
+        qlist.traverseFrontAndPrint();
+      
+        System.out.println("Peeked: " + qlist.peek());
+      
+     }
 }
   
   
