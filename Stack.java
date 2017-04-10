@@ -59,4 +59,22 @@ public class Stack {
            return poppedValue; 
        }
    }
+   //Takes the next top item without removing it
+   public String peek(){
+     if(isEmpty()){
+           System.out.println("The Stack is empty."); 
+           return null; 
+       }
+      else {
+           return top.value; 
+       }
+   }
+   //Print stack in order
+   public void traverseForwardAndPrint(){
+       Node printingNode = top; 
+      while(printingNode != null){
+           System.out.println(printingNode.value); 
+           printingNode = printingNode.next; 
+       }
+   }
 }
