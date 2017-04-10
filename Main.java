@@ -5,7 +5,7 @@
  * */
 public class Main {
   
-  //Public method moveStackToQueue takes a Stack inputStack enqueues to a Queue then returns
+   //Public method moveStackToQueue takes a Stack inputStack enqueues to a Queue then returns
    public static Queue moveStackToQueue(Stack inputStack){
        Queue newQueue = new Queue();
       
@@ -19,7 +19,7 @@ public class Main {
       return newQueue; 
    }
    
-    //public method moveQueueToStack takes Queue inputQueue and then pushes values to Stack newStack
+   //public method moveQueueToStack takes Queue inputQueue and then pushes values to Stack newStack
    public static Stack moveQueueToStack(Queue inputQueue) 
    {
        Stack newStack = new Stack();
@@ -42,6 +42,26 @@ public class Main {
        return newStack; 
    }
    
+    //public method moveStackToStack takes Stack inputStack and then pushes values to Stack duplicate 
+    public static Stack moveStackToStack(Stack inputStack) {
+       Stack duplicateStack = new Stack(); 
+       String [] stringArray = new String [inputStack.getLength()];
+      
+       Stack.Node pushingNode2 = inputStack.top;
+      
+       int arrayLocation = 0; 
+       
+       while(pushingNode2 != null) {
+           stringArray[arrayLocation] = pushingNode2.value; 
+           arrayLocation++; 
+           pushingNode2 = pushingNode2.next; 
+       }
+      for (int x = stringArray.length - 1; x >= 0 ; x--) {
+           duplicateStack.push(stringArray[x]);
+       }
+      
+       return duplicateStack; 
+   }
 }
   
   
