@@ -145,7 +145,18 @@ public class Main {
        testStack3.traverseForwardAndPrint();
       
        System.out.println();
-     }}
-       
+     
+       //testing moveStackToStack method
+       System.out.println("Testing the moveStackToStack method: ");
+       Stack Stack4 = new Stack();
+      
+       Stack4 = moveStackToStack(list2);
+       System.out.println("The Original Stack: ");
+       list2.traverseForwardAndPrint();
+       System.out.println("\nThe Second Stack: ");
+       Stack4.traverseForwardAndPrint();
+      
+   }
+}
   
         
