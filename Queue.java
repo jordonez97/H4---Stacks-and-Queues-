@@ -73,6 +73,31 @@ public class Queue {
         return dequeuedValue; 
        }
     }
-
+    
+    //Takes item from end of queue without removing it
+    public String peek() {
+       if(isEmpty()){
+           System.out.println("The Queue is empty."); 
+           return null;
+       }
+       else {
+           return front.value;
+       }
+    }
+   //Print Queue in order 
+   public void traverseFrontAndPrint()
+   {
+       Node printingNode = front;
+      
+       while(printingNode != null) 
+       {
+           System.out.println(printingNode.value); 
+           printingNode = printingNode.next; 
+       }
+   }
 }
+    
+    
+
+
   
