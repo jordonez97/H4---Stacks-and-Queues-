@@ -11,4 +11,16 @@ public class Queue {
        //variables
        String value; 
        Node next; 
-  }}
+       
+       //Constructor
+       Node(String val, Node n) {
+            value = val;
+            next = n;
+       }
+       
+       Node(String val) {
+           this(val, null); 
+       }  
+   }
+}
+  
